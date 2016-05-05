@@ -1,5 +1,6 @@
 /* jshint node:true */
 var fs = require('fs');
+require('dotenv').config();
 
 var site = require('apostrophe-site')();
 
@@ -10,8 +11,8 @@ site.init({
  shortName: 'capitalcitycondors',
   hostName: 'capitalcitycondors',
   title: 'Capital City Condors',
-  sessionSecret: 'This should be in a variable',
-  adminPassword: 'demo',
+  sessionSecret: process.env.SESSOIN_SECRET,
+  adminPassword: process.env.ADMIN_PASSWORD,
 
   // Force a2 to prefix all of its URLs. It still
   // listens on its own port, but you can configure
