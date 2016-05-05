@@ -7,10 +7,10 @@ site.init({
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
-  shortName: 'apostrophe-sandbox',
-  hostName: 'apostrophe-sandbox',
-  title: 'Apostrophe Sandbox',
-  sessionSecret: 'apostrophe sandbox demo party',
+ shortName: 'capitalcitycondors',
+  hostName: 'capitalcitycondors',
+  title: 'Capital City Condors',
+  sessionSecret: 'This should be in a variable',
   adminPassword: 'demo',
 
   // Force a2 to prefix all of its URLs. It still
@@ -115,8 +115,6 @@ site.init({
     'apostrophe-browserify': {
       files: ["./public/js/modules/_site.js"]
     },
-    'apostrophe-demo-login': {
-    }
   },
 
   // These are assets we want to push to the browser.
