@@ -11,7 +11,7 @@ site.init({
  shortName: 'capitalcitycondors',
   hostName: 'capitalcitycondors',
   title: 'Capital City Condors',
-  sessionSecret: process.env.SESSOIN_SECRET,
+  sessionSecret: process.env.SESSION_SECRET,
   adminPassword: process.env.ADMIN_PASSWORD,
 
   // Force a2 to prefix all of its URLs. It still
@@ -47,7 +47,9 @@ site.init({
     types: [
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
-      { name: 'blog', label: 'Blog' }
+      { name: 'blog', label: 'Blog' },
+      {name: 'about', label: 'About Page'},
+      {name: 'donate', label:'donate'}
     ]
   },
 
@@ -76,6 +78,7 @@ site.init({
   modules: {
     // Styles required by the new editor, must go FIRST
     'apostrophe-editor-2': {},
+    'apostrophe-events': {widget: true},
     'apostrophe-ui-2': {},
     'apostrophe-blog-2': {
       perPage: 5,
@@ -115,6 +118,27 @@ site.init({
     'apostrophe-groups': {},
     'apostrophe-browserify': {
       files: ["./public/js/modules/_site.js"]
+    },
+        'apostrophe-donate': {
+      // production has this in local.js 
+      payPal: {
+        mode: 'sandbox',
+        client_id: 'xxxxxx',
+        client_secret: 'xxxxxx'
+      },
+      description: 'Donation for P\'unk Ave', //description of transaction 
+      // configure the email to send to the donor 
+      from:{
+        email: 'email@email.com',
+        name: 'First Last'
+      },
+      // configure the email to send to the recipient of the donation 
+      recipient:{
+        email: 'email@gmail.com',
+        name: 'Recipient'
+      },
+      thankYouSubject: 'Thanks!', // subject of the email to the donor 
+      confirmationSubject: 'Yay!' // subject of the email to send to the recipient of the donation, 
     },
   },
 

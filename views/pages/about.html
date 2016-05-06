@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% include "pageMacros.html" %}
+
+{# the bodyClass block allows us to attach a classname to the body tag for easy style-scoping. #}
+{# be sure to call super() so that any pages inheriting this one will be appending classes, not overriding them. #}
+{% block bodyClass %}{{ super() }} default-page{% endblock %}
+
+{% block headerMessage %}You are on the "Default Page" template of the Apostrophe demo site.{% endblock %}
+
+{% block upperClass %}bg-gold{% endblock %}
+
+
+{# Headless template for the 'About us' page.#}
+{% block mainContent %}
+  <div class="block content">
+    <div class="inner">
+      <!--
+      <div class="demo-subnav inline-top width-25">
+        {% if page.parent.type == 'default' %}
+          <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
+        {% endif %}
+        <div class="subnav-page-title hide-mobile">{{ page.title }}</div>
+        <ul class="subnav-items hide-mobile">
+          {% for child in page.children %}
+            <li class="subnav-item">
+              <a href="{{ child.url }}">{{ child.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="width-75 inline-middle ">
+        {{ aposArea(page, 'main', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
+      </div>
+      -->
+      
+      <div class="block content--bottom">
+        <div class="inner demo-pageheader">
+          {{ aposArea(page, 'main',{
+            controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+            styles: [
+              { value: 'p', label: 'Text' },
+              { value: 'h3', label: 'Title' },
+              { value: 'h5', label: 'Subtitle' }
+            ],
+            lockups: ['left', 'right']
+          }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% include "pageMacros.html" %}
+
+{# the bodyClass block allows us to attach a classname to the body tag for easy style-scoping. #}
+{# be sure to call super() so that any pages inheriting this one will be appending classes, not overriding them. #}
+{% block bodyClass %}{{ super() }} default-page{% endblock %}
+
+{% block headerMessage %}You are on the "Default Page" template of the Apostrophe demo site.{% endblock %}
+
+{% block upperClass %}bg-gold{% endblock %}
+
+{% block headerContent %}
+  <div class="demo-pageheader">
+    <div class="column column-center width-150">
+      <button type="button" class="btn btn-info btn-lg"><i class="fa fa-paypal" aria-hidden="true"></i>
+<a href="#" id="paypal">Paypal</a>
+      </button>
+ {{ aposDonationForm() }}
+    </div>
+  </div>
+{% endblock %}
+
