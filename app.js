@@ -114,32 +114,13 @@ site.init({
             aspectRatio: [100,100]
           }
         }
-      ]
+      ],
+      apply: true,
+      applyConfirm: false
     },
     'apostrophe-groups': {},
     'apostrophe-browserify': {
       files: ["./public/js/modules/_site.js"]
-    },
-        'apostrophe-donate': {
-      // production has this in local.js 
-      payPal: {
-        mode: 'sandbox',
-        client_id: 'xxxxxx',
-        client_secret: 'xxxxxx'
-      },
-      description: 'Donation for P\'unk Ave', //description of transaction 
-      // configure the email to send to the donor 
-      from:{
-        email: 'email@email.com',
-        name: 'First Last'
-      },
-      // configure the email to send to the recipient of the donation 
-      recipient:{
-        email: 'email@gmail.com',
-        name: 'Recipient'
-      },
-      thankYouSubject: 'Thanks!', // subject of the email to the donor 
-      confirmationSubject: 'Yay!' // subject of the email to send to the recipient of the donation, 
     },
   },
   
