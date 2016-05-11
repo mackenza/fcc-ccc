@@ -55,6 +55,7 @@ module.exports = {
     // but this is not necessary. They can all go in the uri option like this:
 
     // mongodb://user:password@host:port/dbname
+    //uri: process.env.MONGOLAB_URI
   }
 };
 
