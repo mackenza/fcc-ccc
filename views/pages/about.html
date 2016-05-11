@@ -13,34 +13,7 @@
 {# Headless template for the 'About us' page.#}
 {% block mainContent %}
   <div class="block content">
-    <div class="inner">
-      <!--
-      <div class="demo-subnav inline-top width-25">
-        {% if page.parent.type == 'default' %}
-          <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
-        {% endif %}
-        <div class="subnav-page-title hide-mobile">{{ page.title }}</div>
-        <ul class="subnav-items hide-mobile">
-          {% for child in page.children %}
-            <li class="subnav-item">
-              <a href="{{ child.url }}">{{ child.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      
-      <div class="width-75 inline-middle ">
-        {{ aposArea(page, 'main', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' },
-            { value: 'h5', label: 'Subtitle' }
-          ],
-          lockups: ['left', 'right']
-        }) }}
-      </div>
-      -->
+    <div class="inner ">
       
       <div class="block content--bottom">
         <div class="inner demo-pageheader">
@@ -55,6 +28,7 @@
           }) }}
         </div>
       </div>
+      
     </div>
   </div>
 {% endblock %}

@@ -49,7 +49,8 @@ site.init({
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Blog' },
       {name: 'about', label: 'About Page'},
-      {name: 'donate', label:'donate'}
+      {name: 'donate', label:'donate'},
+      {name: 'events', label:'Events'}
     ]
   },
 
@@ -141,6 +142,8 @@ site.init({
       confirmationSubject: 'Yay!' // subject of the email to send to the recipient of the donation, 
     },
   },
+  
+  'apostrophe-map': { },
 
   // These are assets we want to push to the browser.
   // The scripts array contains the names of JS files in /public/js,
