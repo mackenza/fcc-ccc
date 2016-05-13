@@ -51,7 +51,9 @@ site.init({
       {name: 'about', label: 'About Page'},
       {name: 'donate', label:'donate'},
       {name: 'events', label:'Events'},
-      {name: 'forms', label:'Form'}
+      {name: 'forms', label:'Form'},
+      // for testing
+      {name: 'styleguide', label:'guide'},
     ]
   },
 
