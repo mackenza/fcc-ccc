@@ -21,7 +21,7 @@
           {{ aposPeopleMenu(permissions) }}
           {{ aposGroupsMenu(permissions) }}
           {{ aposEventsMenu(permissions) }}
-          {{ aposFormsMenu(permissions) }}
+          {{ aposFormsMenu({ edit: permissions.admin }) }}
           {{ aposMediaMenu({ edit: permissions.guest })}}
           {{ aposTagsMenu({ edit: permissions.admin }) }}
           

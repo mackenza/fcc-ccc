@@ -29,15 +29,15 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 	      </li>
-	      <li>
-	      	<a href="#" data-people-apply>Sign Up</a>
-	      </li>
 	      	{% if user %}
 	      <li class="nav-item">
 	        <a href="/logout" >Logout</a>
 	      </li>
 	    {% else %}
-	    	<li class="nav-item">
+	      <li class="nav-item">
+	        <a href="#" data-people-apply>Sign-Up</a>
+	      </li>
+	      <li class="nav-item">
 	        <a href="/login" >Login</a>
 	      </li>
 	    {% endif %}
