@@ -8,7 +8,7 @@ site.init({
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
- shortName: 'capitalcitycondors',
+  shortName: 'capitalcitycondors',
   hostName: 'capitalcitycondors',
   title: 'Capital City Condors',
   sessionSecret: process.env.SESSION_SECRET,
