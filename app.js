@@ -50,7 +50,8 @@ site.init({
       { name: 'blog', label: 'Blog' },
       {name: 'about', label: 'About Page'},
       {name: 'donate', label:'donate'},
-      {name: 'events', label:'Events'}
+      {name: 'events', label:'Events'},
+      {name: 'forms', label:'Form'}
     ]
   },
 
@@ -80,6 +81,7 @@ site.init({
     // Styles required by the new editor, must go FIRST
     'apostrophe-editor-2': {},
     'apostrophe-events': {widget: true},
+      'apostrophe-forms': {widget:true},
     'apostrophe-ui-2': {},
     'apostrophe-blog-2': {
       perPage: 5,
@@ -124,7 +126,7 @@ site.init({
     },
   },
   
-  'apostrophe-map': { },
+  'apostrophe-map': {},
 
   // These are assets we want to push to the browser.
   // The scripts array contains the names of JS files in /public/js,
